@@ -1,0 +1,74 @@
+h1{
+  font-size: 35px;
+  background-color: black;
+  padding: 25px;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica;
+  margin-bottom: 0
+
+}
+nav{
+  font-size: 30px;
+}
+ nav a{
+   font-weight: bold;
+  background-color: rgb(128, 128, 128);
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.67);
+  font-family: Arial, Helvetica;
+  display: block;
+  margin: 1px;
+  text-align: center;
+  text-decoration: none
+
+
+}
+
+div section {
+  background-color: aqua;
+  padding: 20px;
+  margin: 40px;
+  font-size: 30px;
+  font-weight: bold;
+
+
+}
+.link{
+  margin-left: -10px
+
+}
+
+div a{
+  font-size: 20px;
+}
+div{
+  padding: 10px;
+
+}
+
+p a{
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid aqua;
+  font-weight: bold;
+}
+p{
+  background-color: rgba(244, 67, 54, 0.68);
+  padding: 20px;
+  font-size: 30px;
+  margin: 40px;
+  margin-bottom: 20px;
+
+}
+
+
+
+footer{
+  background-color: black;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica;
+  font-size: 15px;
+}

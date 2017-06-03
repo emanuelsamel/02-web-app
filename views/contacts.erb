@@ -1,7 +1,14 @@
-<h1>Contacts</h1>
-<ul>
+<p>These are <a href="#"><%= @contacts.length %></a> contacts</p>
+
+<div>
   <% @contacts.each do |contact| %>
-    <li> Full Name: <%= contact.full_name %> | Email: <%= contact.email %> | Note: <%= contact.note %> </li>
+    <section> <%= contact.full_name %> ( <%= contact.email %> )
+      <div class="link">
+        <a href="">Edit</a> |
+        <a href="">Delete</a>
+      </div>
+
+    </section>
   <% end %>
-</ul>
+</div>
 <a href="http://localhost:4567/home"></a>

@@ -1,12 +1,9 @@
 
 require_relative 'contact'
 require 'sinatra'
+require 'sinatra/reloader'
 
 get "/home" do
-  erb :index
-end
-
-get '/contacts' do
   @contacts = Contact.all
   erb :contacts
 end
@@ -15,6 +12,9 @@ get "/about" do
   erb :about
 end
 
+get "/Add a contact" do
+  erb :Add_contact
+end
 
 after do
   ActiveRecord::Base.connection.close
