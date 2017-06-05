@@ -2,8 +2,10 @@
 require_relative 'contact'
 require 'sinatra'
 require 'sinatra/reloader'
-
-get "/home" do
+get "/"do
+  erb :home
+end
+get "/contacts" do
   @contacts = Contact.all
   erb :contacts
 end
@@ -27,8 +29,14 @@ get "/contacts/:id" do
   end
 end
 
-post "/contacts" do
-puts params
+post "/create" do
+  Contact.create(
+      first_name: params[:first_name],
+      last_name:  params[:last_name],
+      email:      params[:email],
+      note:       params[:note]
+    )
+    redirect "/contacts"
 end
 after do
   ActiveRecord::Base.connection.close
