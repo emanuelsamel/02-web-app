@@ -16,6 +16,12 @@ get "/Add a contact" do
   erb :Add_contact
 end
 
+get "/contact/:id" do
+  params[:id]
+  @contact = Contact.find(params[:id].to_i)
+  erb :show_contact
+end
+
 after do
   ActiveRecord::Base.connection.close
 end
