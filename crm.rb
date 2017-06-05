@@ -16,9 +16,9 @@ get "/Add a contact" do
   erb :Add_contact
 end
 
-get "/contact/:id" do
+get "/contacts/:id" do
 
-  @contact = Contact.find(params[:id].to_i)
+  @contact = Contact.find_by(id: params[:id])
   if
     @contact
   erb :show_contact
