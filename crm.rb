@@ -12,7 +12,7 @@ get "/about" do
   erb :about
 end
 
-get "/Add a contact" do
+get "/contacts/new" do
   erb :Add_contact
 end
 
@@ -27,6 +27,9 @@ get "/contacts/:id" do
   end
 end
 
+post "/contacts" do
+puts params
+end
 after do
   ActiveRecord::Base.connection.close
 end
