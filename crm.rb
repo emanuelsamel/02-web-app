@@ -17,9 +17,14 @@ get "/Add a contact" do
 end
 
 get "/contact/:id" do
-  params[:id]
+
   @contact = Contact.find(params[:id].to_i)
+  if
+    @contact
   erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end
 
 after do
