@@ -1,12 +1,20 @@
 <p>These are <a href="#"><%= @contacts.length %></a> contacts</p>
 
 <div>
-   <% @contacts.each do |contact| %>
-   <section> <a href=/contacts/<%= contact.id %>> <%= contact.full_name %> </a>( <%= contact.email %> ) 
+   <% @contacts.each do |current_contact| %>
+   <section> <a href=/contacts/<%= current_contact.id %>> <%= current_contact.full_name %> </a>( <%= current_contact.email %> )
 
       <div class="link">
-        <a href="">Edit</a> |
-        <a href="">Delete</a>
+        
+        <form action='/contacts/<%= current_contact.id %>/edit' method='get'>
+          <input type='submit' value='Edit Contact'>
+        </form>
+
+        <form action='/contacts/<%= current_contact.id %>' method='post'>
+          <input type='hidden' name='_method' value='delete'>
+          <input type='submit' value='Delete Contact'>
+        </form>
+
       </div>
 
     </section>

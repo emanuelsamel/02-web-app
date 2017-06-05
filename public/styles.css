@@ -72,3 +72,7 @@ footer{
   font-family: Arial, Helvetica;
   font-size: 15px;
 }
+
+form  {
+  display: inline;
+}
